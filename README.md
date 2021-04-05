@@ -5,6 +5,15 @@ _Eduardo R. B. Marques, DCC/FCUP_
 
 # Ficha 2
 
+## Exemplos da aula e outros ficheiros associados
+
+Ficheiro|Descrição|
+-------|---------|
+`BlockingQueue1.java` | Fila de capacidade limitada usando monitores para sincronização.|
+`BlockingQueue2.java`| Variante recorrendo a `ReentrantLock` e variáveis de condição.|
+`TestBlockingQueue` | Programa de teste.|
+`D.java` | Classe utilitária para "debugging".|
+
 ## 1
 
 Considere o esqueleto inicial para a implementação de uma stack,  disponibilizada no ficheiro `Stack1.java`.  Pretende-se que complete a implementação atendendo a que:
