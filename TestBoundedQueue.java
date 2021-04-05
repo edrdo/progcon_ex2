@@ -40,7 +40,7 @@ public class TestBoundedQueue {
         bq.remove();
       }
       catch (InterruptedException e) {
-        throw new RuntimeException(e);
+        throw new RuntimeException("Unexpected interrupt");
       }
     });
     t.setName("C_" + i);

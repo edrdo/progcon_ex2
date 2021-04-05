@@ -20,8 +20,9 @@ public class BoundedQueue1<E> implements IBoundedQueue<E>{
     }
     elems[(head + size) % elems.length] = elem;
     size++;
-    D.print("add(%s) [size: %d]", elem, size);
     notify();
+    
+    D.print("add(%s) [size: %d]", elem, size);
   }
 
   public synchronized E remove() 
@@ -33,6 +34,7 @@ public class BoundedQueue1<E> implements IBoundedQueue<E>{
     head = (head + 1) % elems.length;
     size--;
     notify();
+    
     D.print("remove(%s) [size: %d]", elem, size);
     return elem;
   }
