@@ -9,10 +9,10 @@ _Eduardo R. B. Marques, DCC/FCUP_
 
 Ficheiro|Descrição|
 -------|---------|
-`IBlockingQueue.java`| Interface para fila de capacidade limitada.|
-`BlockingQueue1.java` | Fila de capacidade limitada usando monitores para sincronização.|
-`BlockingQueue2.java`| Variante recorrendo a `ReentrantLock` e variáveis de condição.|
-`TestBlockingQueue` | Programa de teste.|
+`IBoundedQueue.java`| Interface para fila de capacidade limitada e com operações bloqueantes `add()` e `remove()`.|
+`BoundedQueue1.java` | Implementação de `IBoundedQueue` usando monitores para sincronização.|
+`BoundedQueue2.java`| Implementação de `IBoundedQueue` usando `ReentrantLock` e variáveis de condição.|
+`TestBoundedQueue` | Programa de teste.|
 `D.java` | Classe utilitária para "debugging".|
 
 ## 1
@@ -32,7 +32,7 @@ Em `Stack2.java` implemente uma stack com características similares ao do exerc
 
 ## 3 
 
-Em `Stack3.java` implemente uma terceira versão da stack, recorrendo a um objecto de tipo  [`java.util.concurrent.LinkedBlockingDeque`](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/LinkedBlockingDeque.html). Ao contrário de `LinkedList`, esta classe é "thread-safe".
+Em `Stack3.java` implemente uma terceira versão da stack, recorrendo a um objecto de tipo  [`java.util.concurrent.LinkedBoundedDeque`](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/LinkedBoundedDeque.html). Ao contrário de `LinkedList`, esta classe é "thread-safe".
 
 
 
