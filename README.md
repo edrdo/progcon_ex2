@@ -9,6 +9,7 @@ _Eduardo R. B. Marques, DCC/FCUP_
 
 Ficheiro|Descrição|
 -------|---------|
+`IBlockingQueue.java`| Interface para fila de capacidade limitada.|
 `BlockingQueue1.java` | Fila de capacidade limitada usando monitores para sincronização.|
 `BlockingQueue2.java`| Variante recorrendo a `ReentrantLock` e variáveis de condição.|
 `TestBlockingQueue` | Programa de teste.|
