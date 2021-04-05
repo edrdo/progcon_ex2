@@ -5,15 +5,15 @@ _Eduardo R. B. Marques, DCC/FCUP_
 
 # Ficha 2
 
-## Exemplos da aula e outros ficheiros associados
+## Exemplos da aula e outros ficheiros
 
 Ficheiro|Descrição|
 -------|---------|
-`IBoundedQueue.java`| Interface para fila de capacidade limitada e com operações bloqueantes `add()` e `remove()`.|
+`IBoundedQueue.java`| Interface Java para fila de capacidade limitada e com operações bloqueantes `add()` e `remove()`.|
 `BoundedQueue1.java` | Implementação de `IBoundedQueue` usando monitores para sincronização.|
 `BoundedQueue2.java`| Implementação de `IBoundedQueue` usando `ReentrantLock` e variáveis de condição.|
 `TestBoundedQueue` | Programa de teste.|
-`D.java` | Classe utilitária para "debugging".|
+`D.java` | Classe auxiliar para "debugging".|
 
 ## 1
 
