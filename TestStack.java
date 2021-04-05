@@ -22,21 +22,15 @@ public class TestStack {
   }
   
   static Thread producer(IStack<Integer> bq, int i) {
-    Thread t = new Thread(() -> {
-      D.print("Producer adding item ...", i);
-      bq.push(i);
-      D.print("Producer added %d", i);
-    });
+    Thread t = new Thread(() -> { bq.push(i); });
     t.setName("P_" + i);
     return t;
   }
 
   static Thread consumer(IStack<Integer> bq, int i) {
-    Thread t = new Thread(() -> {
-      try {
-        D.print("Consumer removing item ...");
-        int v = bq.pop();
-        D.print("Consumer obtained %d", v);
+    Thread t = new Thread(() -> { 
+      try { 
+        bq.pop();
       }
       catch (InterruptedException e) {
         throw new RuntimeException(e);

@@ -9,7 +9,7 @@ public class D {
   public static void print(String message, Object... args) {
     if (DEBUG) {
       synchronized (LOCK) {
-        System.out.print( Thread.currentThread().getName() + " | ");
+        System.out.printf("[%s] ", Thread.currentThread().getName());
         System.out.printf(message, args);
         System.out.println();
       }

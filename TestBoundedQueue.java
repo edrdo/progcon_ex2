@@ -24,9 +24,7 @@ public class TestBoundedQueue {
   static Thread producer(IBoundedQueue<Integer> bq, int i) {
     Thread t = new Thread(() -> {
       try {
-        D.print("Producer adding item ...", i);
         bq.add(i);
-        D.print("Producer added %d", i);
       }
       catch (InterruptedException e) {
         throw new RuntimeException("Unexpected interrupt");
@@ -39,9 +37,7 @@ public class TestBoundedQueue {
   static Thread consumer(IBoundedQueue<Integer> bq, int i) {
     Thread t = new Thread(() -> {
       try {
-        D.print("Consumer removing item ...");
-        int v = bq.remove();
-        D.print("Consumer obtained %d", v);
+        bq.remove();
       }
       catch (InterruptedException e) {
         throw new RuntimeException(e);

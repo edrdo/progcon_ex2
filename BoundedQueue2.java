@@ -24,7 +24,8 @@ public class BoundedQueue2<E> implements IBoundedQueue<E> {
       while (size == elems.length) notFull.await();
       elems[(head + size) % elems.length] = elem;
       size++;
-      if (size == 1) notEmpty.signal();
+      notEmpty.signal();
+      D.print("add(%s) [size: %d]", elem, size);
     }
     finally {
       qlock.unlock();
@@ -39,6 +40,7 @@ public class BoundedQueue2<E> implements IBoundedQueue<E> {
       head = (head + 1) % elems.length;
       size--;
       notFull.signal();
+      D.print("remove(%s) [size: %d]", elem, size);
       return elem;
     }
     finally {
